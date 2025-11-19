@@ -1,0 +1,301 @@
+:root {
+  font-family: 'Space Grotesk', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #f4f4f4;
+  background-color: #020202;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #020202;
+  color: inherit;
+}
+
+#root button {
+  font: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+}
+
+button:focus-visible {
+  outline: 1px dashed #fdfdfd;
+  outline-offset: 4px;
+}
+
+#root,
+.app-shell {
+  min-height: 100vh;
+  background: #010101;
+}
+
+.app-shell {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  color: #e6e6e6;
+}
+
+.control-room {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.kitt-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #bababa;
+}
+
+.kitt-title {
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  color: #fdfdfd;
+  letter-spacing: 0.1em;
+}
+
+.kitt-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  gap: 1.75rem;
+}
+
+.panel {
+  border: 1px solid #2b2b2b;
+  border-radius: 28px;
+  background: #040404;
+  padding: clamp(1.2rem, 2vw, 2rem);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.panel--globe {
+  padding: 1rem;
+}
+
+.truck-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.panel-headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.panel-headline h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.3em;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+
+.panel-headline span {
+  color: #a1a1a1;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.metric-card {
+  border: 1px solid #2b2b2b;
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #c4c4c4;
+}
+
+.metric-card strong {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.4rem;
+  color: #fdfdfd;
+  letter-spacing: 0.1em;
+}
+
+.truck-view {
+  height: 420px;
+  border-radius: 22px;
+  border: 1px solid #2d2d2d;
+  background: radial-gradient(circle at 50% 35%, rgba(255, 255, 255, 0.15), rgba(2, 2, 2, 0.95));
+  overflow: hidden;
+}
+
+.truck-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.shipments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shipment-card {
+  border-radius: 18px;
+  border: 1px solid #2a2a2a;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  background: #040404;
+  text-align: left;
+}
+
+.shipment-card.active {
+  border-color: #f5f5f5;
+}
+
+.shipment-card small {
+  letter-spacing: 0.2em;
+  color: #a9a9a9;
+  text-transform: uppercase;
+}
+
+.shipment-card strong {
+  letter-spacing: 0.12em;
+}
+
+.prompt-panel {
+  border-radius: 22px;
+  border: 1px solid #2c2c2c;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.prompt-panel label {
+  letter-spacing: 0.24em;
+  color: #b5b5b5;
+  text-transform: uppercase;
+}
+
+.prompt-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.prompt-input {
+  flex: 1;
+  background: #010101;
+  border: 1px solid #2c2c2c;
+  border-radius: 999px;
+  padding: 0.9rem 1.2rem;
+  color: #fdfdfd;
+  font-size: 1rem;
+}
+
+.prompt-input::placeholder {
+  color: #6f6f6f;
+  letter-spacing: 0.12em;
+}
+
+.prompt-button {
+  background: #ffffff;
+  color: #010101;
+  border: none;
+  border-radius: 999px;
+  padding: 0.9rem 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.prompt-status {
+  min-height: 1.2rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  color: #9c9c9c;
+}
+
+.prompt-status.success {
+  color: #e6e6e6;
+}
+
+.prompt-status.error {
+  color: #ff6666;
+}
+
+.globe-view {
+  width: 100%;
+  height: 380px;
+}
+
+.analysis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.analysis-item {
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 0.8rem 1rem;
+  letter-spacing: 0.1em;
+}
+
+.analysis-item span {
+  display: block;
+  color: #bdbdbd;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  font-size: 0.78rem;
+}
+
+.analysis-item strong {
+  font-size: 0.9rem;
+  color: #f1f1f1;
+  font-weight: 500;
+}
+
+.failure {
+  color: #ff5c5c;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 1024px) {
+  .kitt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prompt-row {
+    flex-direction: column;
+  }
+
+  .prompt-button {
+    width: 100%;
+  }
+}

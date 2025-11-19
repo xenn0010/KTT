@@ -1,0 +1,10 @@
+# DeepPack3D Dependencies
+# Install with: pip install -r requirements-deeppack3d.txt
+# Or system-wide: sudo apt-get install python3-numpy python3-matplotlib python3-tensorflow
+
+numpy==1.26.4
+matplotlib==3.9.0
+tensorflow==2.10.0
+
+# Note: TensorFlow 2.10.0 requires Python 3.10
+# For Python 3.12+, consider using tensorflow>=2.15
